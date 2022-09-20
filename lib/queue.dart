@@ -20,4 +20,13 @@ class Queue<T extends Object> {
       throw Exception('Item cannot be dequeued from empty queue');
     }
   }
+
+  //Returns element from the top
+  T peek() {
+    if (_content.isNotEmpty) {
+      return _content.first;
+    } else {
+      throw Error();
+    }
+  }
 }
